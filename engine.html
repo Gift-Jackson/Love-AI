@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport", content="width=device-width, initial-scale = 1.0">
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=63cbd8aae430b20019dc3cff&amp;product=inline-share-buttons' async='async'></script>
+    <title>Love AI | Engine page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<style>
+    
+</style>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="logo">
+                <h1>Love<span class="mark">.ai</span></h1>
+            </div>
+            <div class="dropdown-menu">
+                <label class="menu-btn">&#9776</label>
+                <div class="menu-list">
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="review.html">Reviews</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="ads">
+            <p><bold>Reserved For Ads</bold></p>
+        </div>
+            <div class="cont">
+                <div class="wrapper">
+            <h2>Try Now!</h2>
+            <p style="color: #000;">Find Your Soul Mate with this <span class="mark">AI</span> technology!</p>
+          <div class="inputArea">
+            <div class="content">
+                
+                <input type="text" name="" id="yName" class="inps" placeholder="Your name" />
+            </div>
+            <div class="content">
+                
+                <input type="text" name="" id="oName" class="inps" placeholder="Lover's name" />
+            </div>
+          </div>  
+          <div class="btnCont">
+              <button class="btn btn1">Check</button>
+              <button class="btn btn2">Clear Result</button>
+          </div>
+          <div class="ansArea">
+              <h3 class="names">
+                  <span class="fName"></span>
+                  <span class="ans"></span>
+                  <span class="oName"></span>
+              </h3>
+          </div>
+        </div>
+<!-- ShareThis BEGIN -->
+<div class="sharethis-inline-reaction-buttons"></div>
+<!-- ShareThis END -->
+            </div>
+          <div class="review">
+              <a href="contact.html">
+                  <p>Leave a review &plus;</p>
+              </a>
+          </div>
+            <footer>
+                <h4>Powered By ICE-CODE & Gif-tech &copy; 2023</h4>
+            </footer>
+    </div>
+    
+    
+    <!-- The Script -->
+    <script type="text/javascript" charset="utf-8">
+            let ans = ["Will Marry", "Will Not Marry", "Will Always Quarrel With", "Will Break Up With", "Will Divorce"];
+            
+            const fInput = document.querySelector('#yName');
+            const oInput = document.querySelector("#oName");
+            const btn = document.querySelector('.btn1');
+            const btnClear = document.querySelector(".btn2");
+            const ansInp = document.querySelector(".ans");
+            let fName = document.querySelector(".fName");
+            let OName = document.querySelector('.oName');
+            let count = 0;
+            
+            function rdnAns() {
+                count = Math.floor(Math.random() * ans.length);
+                ansInp.textContent = ans[count];
+                fName.textContent = fInput.value;
+                OName.textContent = oInput.value;
+                
+                fInput.value = "";
+                oInput.value = "";
+            }
+            
+            function clear() {
+                fName.textContent = "";
+                OName.textContent = "";
+                ansInp.textContent = "";
+                
+            }
+            
+            clear();
+            
+                                    
+            btn.addEventListener("click", (e) => {
+                if(fInput.value === "" || oInput.value === "") {
+                    alert('Make sure you input both fields');
+                }
+                else {
+                    rdnAns();
+                    btnClear.style.opacity = "1";
+                }
+                fInput.value = "";
+                oInput.value = "";
+                
+            })
+            
+            btnClear.addEventListener("click", () => {
+                clear();
+                btnClear.style.opacity = "0";
+            })
+        </script>
+</body>
+</html>

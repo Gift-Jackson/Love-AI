@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport", content="width=device-width, initial-scale = 1.0">
+    <title>Love AI | Review page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=63cbd8aae430b20019dc3cff&product=inline-share-buttons&source=platform" async="async"></script>
+<style>
+    .box{
+        height:80vh;
+        display:grid;
+        place-items:center;
+    }
+    .box h1{
+        color:#ccc;
+    }
+    .box .circle{
+        height: 80px;
+        width: 80px;
+        border:6px solid #06007D;
+        border-top:6px solid #ccc;
+        border-radius:50%;
+        animation: load 0.5s linear infinite;
+    }
+    @keyframes load{
+        100%{
+            transform:rotate(360deg);
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="logo">
+                <h1>Love<span class="mark">.ai</span></h1>
+            </div>
+            <div class="dropdown-menu">
+                <label class="menu-btn">&#9776</label>
+                <div class="menu-list">
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="engine.html">Try Now!</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        <div class="box">
+            <div class="circle"></div>
+            <h1>No Reviews Yet!</h1>
+        </div>
+    </div>
+</body>
+</html>
